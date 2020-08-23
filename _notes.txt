@@ -19,3 +19,5 @@
 * 
 
 
+* time to reader
+* github metadata
