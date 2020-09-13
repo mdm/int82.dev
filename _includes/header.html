@@ -1,0 +1,26 @@
+<header>
+  <div class="wrapper">
+    <div class="branding">
+      <div class="logo">{%- include logo.svg -%}</div>
+      <div class="name">Migge.io</div>
+    </div>
+
+    <nav>
+      <ul>
+        {% if tab[1] == 'resume' %}
+        <li><a href="/">Articles</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a class="current" href="/resume/">Resume</a></li>
+        {% elsif tab[1] == 'projects' %}
+        <li><a href="/">Articles</a></li>
+        <li><a class="current" href="/projects/">Projects</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        {% else %}
+        <li><a class="current" href="/">Articles</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/resume/">Resume</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+</header>
