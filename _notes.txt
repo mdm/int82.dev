@@ -16,8 +16,12 @@
 * http://webtypography.net/toc/
 * line-height: 1.4
 * http://bradfrost.github.io/this-is-responsive/patterns.html
-* 
+*
 
 
-* time to reader
+* time to read
 * github metadata
+* different favicons per page type
+* animation when hovering over site name
+* margin below sticky header border
+* adjust monospace font size to match normal text

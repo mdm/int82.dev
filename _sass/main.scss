@@ -1,0 +1,236 @@
+:root {
+  box-sizing: border-box;
+  font-size: 1.3125em;
+  line-height: 1.5;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $body-font;
+  background-color: $highlight-bg-color;
+  color: $text-color;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+@media (min-width: 40em) {
+  .wrapper {
+    width: 40em;
+    margin: 0 auto;
+  }
+}
+
+header {
+  background-color: $bg-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-variant-caps: small-caps;
+
+  .branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5 * 1.5rem;
+
+    .logo {
+      svg {
+        height: 1.5 * 1.5rem;
+        transition: all 0.5s;
+      }
+
+      svg:hover {
+        transform: rotate(-20deg);
+        transition: all 1s;
+      }
+    }
+
+    .name {
+      font-size: 1.5 * 1.5rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5 * 1.5rem;
+    list-style: none;
+
+    li a {
+      display: block;
+      padding: (0.2 * 1.5rem) 1rem (0.2 * 1.5rem) 1rem;
+      font-size: 1.25rem;
+      font-variant-caps: small-caps;
+    }
+
+    li a:hover {
+      color: $bg-color;
+    }
+  }
+}
+
+@mixin accented($accent) {
+  a {
+    color: $accent;
+  }
+
+  header {
+    .wrapper {
+      border-bottom: solid 2px $accent;
+    }
+
+    .logo {
+      stroke: $accent;
+    }
+
+    nav ul li a {
+      color: $text-color;
+    }
+
+    nav ul li a.current {
+      color: $accent;
+    }
+
+    nav ul li a:hover {
+      background-color: $accent;
+      color: $bg-color;
+    }
+  }
+}
+
+.body--posts {
+  @include accented($accent-posts);
+}
+
+.body--projects {
+  @include accented($accent-projects);
+}
+
+.body--resume {
+  @include accented($accent-resume);
+}
+
+.content {
+  flex: 1;
+  padding: 1.5rem;
+  padding-top: 10 * 1.5rem;
+  background-color: $bg-color;
+
+  hr {
+    width: 100%;
+    height: 2px;
+    border: 0;
+    color: $highlight-bg-color;
+    background-color: $highlight-bg-color;
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+
+    li a {
+      display: block;
+      padding: 0.25rem 0.5rem;
+      margin: 0.2rem;
+      border-radius: 3px;
+      background-color: $highlight-bg-color;
+      color: $highlight-text-color;
+    }
+  }
+
+  .section-heading {
+    font-family: $body-font;
+    font-size: 1.5rem;
+  }
+
+  .posts__list {
+    padding: 0;
+    list-style: none;
+  }
+
+  .posts__info {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .posts__title {
+    margin-bottom: 0px;
+    font-family: $heading-font;
+    font-weight: $heading-font-weight;
+    font-size: 2rem;
+  }
+
+  .posts__meta {
+    color: $highlight-text-color;
+    font-size: 0.8rem;
+    font-variant-numeric: oldstyle-nums;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .projects__list {
+    padding: 0;
+    list-style: none;
+  }
+
+  .project__title {
+    margin-bottom: 0px;
+    font-family: $heading-font;
+    font-weight: $heading-font-weight;
+    font-size: 3rem;
+  }
+
+  .project__screenshot--thumbnail {
+    border: 2px solid $accent-projects;
+    padding: 0.2rem;
+  }
+
+  @media (min-width: 35em) {
+    .project__description {
+      display: flex;
+
+      .project__screenshot--thumbnail {
+        flex: 1;
+        margin: 1rem;
+        margin-left: 0;
+      }
+
+      .project__blurb {
+        flex: 2;
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 1rem;
+  background-color: $highlight-bg-color;
+  color: $highlight-text-color;
+  text-align: center;
+}
