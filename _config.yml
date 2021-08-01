@@ -22,6 +22,31 @@ url: "https://migge.io" # the base hostname & protocol for your site, e.g. http:
 twitter_username: mdmigge
 github_username:  mdm
 
+collections:
+  projects:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      math: false
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      permalink: "/:year/:month/:day/:title/"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
+      permalink: "/projects/:title/"
+
 # Build settings
 markdown: kramdown
 # theme: minima

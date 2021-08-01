@@ -34,7 +34,7 @@ a:hover {
 
 @media (min-width: 40em) {
   .wrapper {
-    width: 40em;
+    max-width: 40em;
     margin: 0 auto;
   }
 }
@@ -56,12 +56,13 @@ header {
     .logo {
       svg {
         height: 1.5 * 1.5rem;
-        transition: all 0.5s;
+        margin-top: 0.5rem;
+        transition: transform 0.5s;
       }
 
       svg:hover {
         transform: rotate(-20deg);
-        transition: all 1s;
+        transition: transform 1s;
       }
     }
 
@@ -73,7 +74,9 @@ header {
 
   nav ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    padding: 0;
     margin: 1.5 * 1.5rem;
     list-style: none;
 
@@ -173,6 +176,7 @@ header {
 
   .posts__info {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-between;
   }
@@ -185,7 +189,7 @@ header {
   }
 
   .posts__meta {
-    color: $highlight-text-color;
+    color: $secondary-text-color;
     font-size: 0.8rem;
     font-variant-numeric: oldstyle-nums;
   }
@@ -225,6 +229,13 @@ header {
         flex: 2;
       }
     }
+  }
+
+  code {
+    color: $highlight-text-color;
+    background-color: $highlight-bg-color;
+    font-size: 0.75rem;
+    padding: 0.1rem 0.2rem;
   }
 }
 
