@@ -25,3 +25,6 @@
 * animation when hovering over site name
 * margin below sticky header border
 * adjust monospace font size to match normal text
+
+To do:
+* make header non-sticky

@@ -1,3 +1,10 @@
 ---
 layout: default
 ---
+<ul class="posts__list">
+  {%- for project in site.projects -%}
+  <li>
+    <a class="posts__link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
+  </li>
+  {%- endfor -%}
+</ul>

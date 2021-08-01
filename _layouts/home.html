@@ -9,7 +9,7 @@ layout: default
         <a class="posts__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
       {%- assign words = post.content | number_of_words -%}
-      <p class="posts__meta">{{ post.date | date: "%Y-%m-%d" }}, {% include reading_time.html %}</p>
+      <p class="posts__meta">{{ post.date | date: "%Y-%m-%d" }} / {% include reading_time.html %}</p>
     </div>
     {{ post.excerpt }}
     <a href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
