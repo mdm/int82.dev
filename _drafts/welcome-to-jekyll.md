@@ -1,6 +1,5 @@
 ---
 title:  "Welcome to Jekyll!"
-date:   2015-09-08 22:17:41
 ---
 You’ll find this post in your `_posts` directo<span style="color: pink">ry. Go ahead and edit it and r</span>e-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
@@ -12,18 +11,18 @@ Jekyll also offers powerful support for code snippets:
 class SimpleGraph
     Vertex = Struct.new(:edges)
     Edge = Struct.new(:vertex1, :vertex2)
-    
+
     def initialize(num_vertices)
         @edges = []
         @vertices = []
         @test = "some\tstring#{interpolation_test}\r\n"
         num_vertices.times { @vertices << Vertex.new([]) }
     end
-        
+
     def add_vertex
         @vertices << Vertex.new([])
     end
-    
+
     def add_edge(vertex1, vertex2)
         edge = Edge.new(vertex1, vertex2)
         @edges << edge
@@ -35,11 +34,11 @@ class SimpleGraph
         visited = [nil] * @vertices.length
         visited[source] = Edge.new(nil, nil)  # dummy, so we don't visit the source twice
         queue = [source]
-        
+
         while queue.length > 0
             current = queue.delete_at(0)
             #puts current
-            
+
             if current == destination
                 path = []
                 while not (current == source)
@@ -48,7 +47,7 @@ class SimpleGraph
                 end
                 return path.reverse
             end
-            
+
             @vertices[current].edges.each do |edge|
                 if visited[edge.vertex2] == nil  # vertex2 was not visited before
                     queue << edge.vertex2
@@ -56,10 +55,10 @@ class SimpleGraph
                 end
             end
         end
-        
+
         return []
     end
-    
+
     def write_dot_file(filename, directed)
         File.open(filename, 'wb') do |file|
             if directed
