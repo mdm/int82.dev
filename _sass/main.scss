@@ -227,10 +227,27 @@ header {
   }
 
   code {
+    font-size: 0.75rem;
+  }
+
+  pre {
+    padding: 0.5rem;
+    overflow: scroll;
+  }
+
+  :not(pre) > code {
     color: $highlight-text-color;
     background-color: $highlight-bg-color;
-    font-size: 0.75rem;
     padding: 0.1rem 0.2rem;
+    border-radius: 5px;
+  }
+
+  blockquote {
+    width: 80%;
+    border-left: 3px solid $highlight-bg-color;
+    margin-left: 2rem;
+    padding-left: 0.5rem;
+    font-style: italic;
   }
 }
 
