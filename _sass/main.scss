@@ -227,12 +227,17 @@ header {
   }
 
   code {
+    font-family: $code-font;
     font-size: 0.75rem;
   }
 
   pre {
     padding: 0.5rem;
     overflow: scroll;
+  }
+
+  .highlight {
+    border-radius: 5px;
   }
 
   :not(pre) > code {
