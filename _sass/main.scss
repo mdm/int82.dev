@@ -176,11 +176,18 @@ header {
     justify-content: space-between;
   }
 
-  .posts__title, h1, h2, h3, h4, h5 {
+  .posts__title, h1 {
     margin-bottom: 0px;
     font-family: $heading-font;
     font-weight: $heading-font-weight;
     font-size: 2rem;
+  }
+
+  h2, h3, h4, h5 {
+    margin-bottom: 0px;
+    font-family: $heading-font;
+    font-weight: $heading-font-weight;
+    font-size: 1.6rem;
   }
 
   .posts__meta {
