@@ -217,6 +217,12 @@ header {
     padding: 0.2rem;
   }
 
+  .resume__picture {
+    width: 33%;
+    border-radius: 50%;
+    float: right;
+  }
+
   @media (min-width: 35em) {
     .project__description {
       display: flex;
