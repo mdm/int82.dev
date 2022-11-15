@@ -1,5 +1,31 @@
 ---
 layout: default
 ---
-<h1>PROJECT</h1>
+<h1>{{page.title}}</h1>
+
+<div class="project__ataglance">
+  {%- if page.license -%}
+  <img class="project__screenshot" src="{{page.screenshot}}" />
+  {%- endif -%}
+  <div class="project__metadata">
+    <p>{{page.tagline}}</p>
+    <ul>
+      <li>
+        <img src="/assets/images/github.svg" />
+        <span>Repository: <a href="{{page.repo}}">{{page.repo}}</a></span>
+      </li>
+      <li>
+        <img src="/assets/images/screwdriver-wrench-solid.svg" />
+        <span>Technologies: {{page.tech}}</span>
+      </li>
+      {%- if page.license -%}
+      <li>
+        <img src="/assets/images/scale-balanced-solid.svg" />
+        <span>License: {{page.license}}</span>
+      </li>
+      {%- endif -%}
+    </ul>
+  </div>
+</div>
+
 {{ content }}

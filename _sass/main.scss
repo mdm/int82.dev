@@ -217,6 +217,51 @@ header {
     padding: 0.2rem;
   }
 
+  .project__ataglance {
+    display: flex;
+    flex-wrap: wrap;
+    color: $highlight-text-color;
+    background-color: $highlight-bg-color;
+    padding: 0.1rem 0.5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+
+    .project__screenshot {
+      margin: 0.5rem 0;
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    @media (min-width: 40em) {
+      .project__screenshot {
+        width: 45%;
+      }
+    }
+  }
+
+  .project__metadata {
+    margin: 0.5rem;
+
+    p {
+      margin-top: 0;
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    img {
+      margin-right: 0.5rem;
+      width: 1rem;
+    }
+
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+  }
+
   .resume__picture {
     width: 33%;
     border-radius: 50%;
