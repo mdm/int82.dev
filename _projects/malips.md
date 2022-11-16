@@ -1,10 +1,9 @@
 ---
-title: Test Project
-tagline: A test project imagined in Rust.
-repo: https://github.com/mdm/htraceray
-tech: Haskell
+title: MALIPS
+tagline: <strong>MA</strong>rc's <strong>LI</strong>near <strong>P</strong>rogramming <strong>S</strong>olver
+repo: https://github.com/mdm/malips
+tech: Rust
 license: MIT
-screenshot: /assets/images/htraceray.png
 ---
 A test project.
 
