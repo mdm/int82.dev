@@ -6,8 +6,9 @@ tech: Rust
 license: MIT
 screenshot: /assets/images/ronald.png
 ---
-A test project.
+Having written a few simple virtual machines this is my first emulator of an actual system that
+exists in hardware. I choose to emulate the [Amstrad CPC][1] because it was the first computer I
+owned, and its built-in BASIC interpreter got me started with programming. The emulation still
+has some issues, but it's able to run a few games - even with audio.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mattis dolor. Phasellus ut nibh sapien. Maecenas velit mi, sodales eget tincidunt vitae, venenatis a metus. Aenean et dolor metus. Ut quam augue, scelerisque at sapien et, consectetur lacinia eros. Sed arcu eros, aliquet et nisi eu, rhoncus venenatis metus. Maecenas efficitur mattis bibendum.
-
-Sed eget neque ligula. Vestibulum convallis tellus et suscipit ultrices. Cras pretium erat dolor, et pulvinar augue convallis ac. Nulla eu fermentum felis. Maecenas neque felis, malesuada vitae nulla consequat, commodo imperdiet turpis. Aliquam pretium odio in purus vehicula fringilla. Pellentesque scelerisque, enim at lobortis malesuada, ex metus congue erat, et vestibulum mauris nunc non neque. Pellentesque arcu metus, ultricies nec erat ac, mollis tincidunt risus. Integer suscipit turpis dolor, et tempus nibh semper ut. Nunc convallis viverra leo a congue.
+[1]: https://en.wikipedia.org/wiki/Amstrad_CPC

@@ -3,11 +3,17 @@ title: htraceray
 tagline: A ray tracer with multi-core support.
 repo: https://github.com/mdm/htraceray
 tech: Haskell
-license: MIT
+license: BSD-3-Clause license
 screenshot: /assets/images/htraceray.png
 ---
-A test project.
+I learned Haskell in university, but had never used it for a non-trivial project.
+To gain more experience with Haskell I implemented a ray tracer in Haskell. I used
+the design from Peter Shirley's "[Ray Tracing in One Weekend][1]" and changed it
+to better fit the functional programming paradigm.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mattis dolor. Phasellus ut nibh sapien. Maecenas velit mi, sodales eget tincidunt vitae, venenatis a metus. Aenean et dolor metus. Ut quam augue, scelerisque at sapien et, consectetur lacinia eros. Sed arcu eros, aliquet et nisi eu, rhoncus venenatis metus. Maecenas efficitur mattis bibendum.
+The ray tracer supports spheres and triangle meshes in a couple of different materials.
+It makes use of multicore processors, but even with that the performance is not on par
+with some other implementations of this design, I have seen around the web. However,
+the results look nice, and I learned a lot about Haskell.
 
-Sed eget neque ligula. Vestibulum convallis tellus et suscipit ultrices. Cras pretium erat dolor, et pulvinar augue convallis ac. Nulla eu fermentum felis. Maecenas neque felis, malesuada vitae nulla consequat, commodo imperdiet turpis. Aliquam pretium odio in purus vehicula fringilla. Pellentesque scelerisque, enim at lobortis malesuada, ex metus congue erat, et vestibulum mauris nunc non neque. Pellentesque arcu metus, ultricies nec erat ac, mollis tincidunt risus. Integer suscipit turpis dolor, et tempus nibh semper ut. Nunc convallis viverra leo a congue.
+[1]: https://raytracing.github.io/books/RayTracingInOneWeekend.html
