@@ -8,5 +8,5 @@
     <line x1="50" y1="32" x2="50" y2="0"/>
   </symbol>
 
-  <use xlink:href="#logo" transform="rotate(20,50,50)" fill="transparent" stroke-width="8"/>
+  <use xlink:href="#logo" transform="rotate(20,50,50)" fill="transparent" stroke="dodgerblue" stroke-width="8"/>
 </svg>
