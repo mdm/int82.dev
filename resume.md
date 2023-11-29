@@ -13,13 +13,13 @@ For most of my career I have been developing web applications. I do full stack w
 
 Privately, I like to explore other areas of programming (see [projects](/projects/)). My favorite language for this is Rust and I hope to use it professionally in the future.
 
-As hobby, I have been playing [Go][1] since 2004 and that in turn lead me to start studying Japanese. I passed the N3 level of the Japanese Language Proficiency Test in 2016.
+As hobby, I have been playing [Go][1] since 2004 and that in turn lead me to start studying Japanese. I passed the N2 level of the Japanese Language Proficiency Test in 2022.
 
 
-<!-- **Contact Information**
+**Contact Information**
 * Email: [marcmigge@gmx.net](mailto:marcmigge@gmx.net)
-* LinkedIn: https://www.linkedin.com/in/marc-dominik-migge/
-* Twitter: @mdmigge
-* Mastodon: @mdmigge@mastodon.social -->
+* LinkedIn: [https://www.linkedin.com/in/marc-dominik-migge/](https://www.linkedin.com/in/marc-dominik-migge/)
+* Twitter: [@mdmigge](https://twitter.com/mdmigge)
+* Mastodon: [@mdmigge@mastodon.social](https://mastodon.social/@mdmigge)
 
 [1]: https://en.wikipedia.org/wiki/Go_(game)
