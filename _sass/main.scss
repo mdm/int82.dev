@@ -99,7 +99,7 @@ header {
       border-bottom: solid 2px $accent;
     }
 
-    .logo {
+    .logo use {
       stroke: $accent;
     }
 
@@ -311,6 +311,36 @@ header {
     margin-left: 2rem;
     padding-left: 0.5rem;
     font-style: italic;
+  }
+
+  blockquote blockquote {
+    margin-left: 0;
+  }
+
+  ol, ul {
+    padding-left: 2rem;
+  }
+
+  dd {
+    margin-left: 2rem;
+  }
+
+  td, th {
+    background-color: $highlight-bg-color;
+    margin: 2px;
+    padding: 1px 0.5rem;
+  }
+
+  th {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: bold;
   }
 }
 
