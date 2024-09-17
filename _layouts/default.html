@@ -2,8 +2,8 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {%- include head.html -%}
   {%- assign tab = page.url | split:'/' -%}
-  {%- if tab[1] == 'resume' -%}
-  <body class="body--resume">
+  {%- if tab[1] == 'about' -%}
+  <body class="body--about">
   {%- elsif tab[1] == 'projects' -%}
   <body class="body--projects">
   {%- else -%}
