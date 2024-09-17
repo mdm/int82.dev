@@ -126,8 +126,8 @@ header {
   @include accented($accent-projects);
 }
 
-.body--resume {
-  @include accented($accent-resume);
+.body--about {
+  @include accented($accent-about);
 }
 
 .content {
@@ -262,7 +262,7 @@ header {
     }
   }
 
-  .resume__picture {
+  .about__picture {
     width: 33%;
     border-radius: 50%;
     float: right;

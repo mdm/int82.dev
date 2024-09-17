@@ -7,18 +7,18 @@
 
     <nav>
       <ul>
-        {% if tab[1] == 'resume' %}
+        {% if tab[1] == 'about' %}
         <li><a href="/">Articles</a></li>
         <li><a href="/projects/">Projects</a></li>
-        <li><a class="current" href="/resume/">Resume</a></li>
+        <li><a class="current" href="/about/">About</a></li>
         {% elsif tab[1] == 'projects' %}
         <li><a href="/">Articles</a></li>
         <li><a class="current" href="/projects/">Projects</a></li>
-        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/about/">About</a></li>
         {% else %}
         <li><a class="current" href="/">Articles</a></li>
         <li><a href="/projects/">Projects</a></li>
-        <li><a href="/resume/">Resume</a></li>
+        <li><a href="/about/">About</a></li>
         {% endif %}
       </ul>
     </nav>
