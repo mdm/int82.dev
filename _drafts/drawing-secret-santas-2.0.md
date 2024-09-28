@@ -1,6 +1,5 @@
 ---
-title:  "Drawing Secret Santas"
-date: 2022-10-15
+title: "Drawing Secret Santas"
 ---
 
 <!--
@@ -17,11 +16,10 @@ should not draw each other" or "you should not draw the same person as last year
 can redo the full draw until everyone draws a name that does not violate any of the constraints,
 but there's a better, algorithmic way that will find a valid draw in one go if that is at all possible.
 
-I've prepared a simple web app demonstrating the algorithm [here](https://santa.migge.io). If you
+I've prepared a simple web app demonstrating the algorithm [here](https://santa.int82.dev). If you
 are interested in how this works read on.
 
-Formalizing The Problem Statement
----------------------------------
+## Formalizing The Problem Statement
 
 Let's first try to phrase the problem of drawing names in a more formal way. Often an algorithmic
 problem we want to solve already has well established solutions in academic literature and using
@@ -30,7 +28,7 @@ what has already been tried on similar problems.
 
 Every participant in the draw has two roles to fulfill: They give a present, and they receive a present.
 Additionally, we want to allow certain giver-receiver combinations and disallow others. We can represent
-this scenario as an [undirected graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)). Each participant
+this scenario as an [undirected graph](<https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)>). Each participant
 is represented by two vertices - a giver vertex and a receiver vertex. An edge between a giver and a
 receiver means we want to allow that combination. Note that edges between two givers or between two
 receivers don't make sense in this scenario. Such a graph, where there are two sets of vertices and edges
@@ -91,16 +89,11 @@ This means that, in the maximum flow as calculated by the Ford-Fulkerson algorit
 receiver that is used (i.e. every edge that is assigned a flow greater than 0) is part of the maximum cardinality
 matching we want to calculate.
 
-The Algorithm
--------------
+## The Algorithm
 
+## The Implementation
 
-The Implementation
-------------------
-
-References
-----------
+## References
 
 I tried to link relevant Wikipedia articles throughout this blog post. But I first came across this algorithm
 in the book "Introduction to Algorithms" by Cormen, et al.
-

@@ -13,34 +13,31 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: migge.io
+title: in82.dev
 email: marcmigge@gmx.net
 description: >- # this means to ignore newlines until "baseurl:"
   Blog & Portfolio by Marc Dominik Migge
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://migge.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: mdmigge
-github_username:  mdm
+url: "https://int82.dev" # the base hostname & protocol for your site, e.g. http://example.com
+mastodon_username: "@int82@fosstodon.org"
+github_username: mdm
 
 collections:
   projects:
     output: true
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       math: false
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: post
       permalink: "/:year/:month/:day/:title/"
-  -
-    scope:
+  - scope:
       path: ""
       type: "projects"
     values:
@@ -52,7 +49,6 @@ markdown: kramdown
 # theme: minima
 plugins:
   - jekyll-feed
-
 # kramdown:
 #   syntax_highlighter: rouge
 #   syntax_highlighter_opts:
