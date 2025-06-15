@@ -1,0 +1,12 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<ul class="projects__list">
+  {% for project in section.pages %}
+  <li>
+    <a class="projects__link" href="{{ project.permalink }}">{{ project.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock content %}

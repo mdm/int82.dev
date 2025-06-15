@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
+<img class="about__picture" src="{{section.extra.picture}}" />
+{{ section.content | safe }}
+{% endblock content %}

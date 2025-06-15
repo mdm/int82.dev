@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul class="posts__list">
+  {% for article in section.pages %}
+  <li>
+    <div class="posts__info">
+      <h2 class="posts__title">
+        <a class="posts__link" href="{{ article.permalink }}">{{ article.title }}</a>
+      </h2>
+      <p class="posts__meta">
+        {% if article.date %}
+          {{ article.date | date(format="%Y-%m-%d") }}
+        {% else %}
+          {{ now() | date(format="%Y-%m-%d") }}
+        {% endif %}
+        / {{ article.reading_time }} minute read
+      </p>
+    </div>
+    {% if article.summary %}
+      {{ article.summary | striptags | safe }}
+    {% elif article.extra.excerpt %}
+      {{ article.extra.excerpt | striptags | safe }}
+    {% else %}
+      {{ article.content | striptags | truncate(length=300) | safe }}
+    {% endif %}
+    <a href="{{ article.permalink }}">Read more...</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock content %}
+

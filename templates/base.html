@@ -1,0 +1,27 @@
+{% block flags %}{% endblock flags %}
+
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  {% include "head.html" %}
+  {% if is_404 %}
+    {% set tab = '404' %}
+  {% else %}
+    {% set tab = '404' %}
+    {% set tab = current_path | split(pat='/') | nth(n=1) %}
+  {% endif %}
+  {% if tab == 'about' %}
+  <body class="body--about">
+  {% elif tab == 'projects' %}
+  <body class="body--projects">
+  {% else %}
+  <body class="body--posts">
+  {% endif %}
+    {% include "header.html" %}
+    <main class="content" aria-label="Content">
+      <div class="wrapper">
+        {% block content %}{% endblock content %}
+      </div>
+    </main>
+    {% include "footer.html" %}
+  </body>
+</html>

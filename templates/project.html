@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{page.title}}</h1>
+
+<div class="project__ataglance">
+  {%- if page.extra.screenshot -%}
+  <img class="project__screenshot" src="{{page.extra.screenshot}}" />
+  {%- endif -%}
+  <div class="project__metadata">
+    <p>{{ page.extra.tagline | safe }}</p>
+    <ul>
+      <li>
+        <img src="/images/github.svg" />
+        <span>Repository: <a href="{{page.extra.repo}}">{{page.extra.repo}}</a></span>
+      </li>
+      <li>
+        <img src="/images/screwdriver-wrench-solid.svg" />
+        <span>Technologies: {{page.extra.tech}}</span>
+      </li>
+      {%- if page.extra.license -%}
+      <li>
+        <img src="/images/scale-balanced-solid.svg" />
+        <span>License: {{page.extra.license}}</span>
+      </li>
+      {%- endif -%}
+    </ul>
+  </div>
+</div>
+
+{{ page.content | safe }}
+{% endblock content %}

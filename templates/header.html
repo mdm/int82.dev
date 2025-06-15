@@ -1,0 +1,26 @@
+<header>
+  <div class="wrapper">
+    <div class="branding">
+      <div class="logo">{{ load_data(path="/static/logo.svg") | safe }}</div>
+      <div class="name">int82.dev</div>
+    </div>
+
+    <nav>
+      <ul>
+        {% if tab == 'about' %}
+        <li><a href="/">Articles</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a class="current" href="/about/">About</a></li>
+        {% elif tab == 'projects' %}
+        <li><a href="/">Articles</a></li>
+        <li><a class="current" href="/projects/">Projects</a></li>
+        <li><a href="/about/">About</a></li>
+        {% else %}
+        <li><a class="current" href="/">Articles</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/about/">About</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+</header>
