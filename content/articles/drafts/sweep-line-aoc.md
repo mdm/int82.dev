@@ -25,4 +25,15 @@ large that this approach is infeasible.
 
 Let's first take a step back and look at a general outline for how sweep line algorithms
 are structured. Then discuss we'll discuss how the Advent of Code problem fits
-into that framework.
+into that framework. Usually sweep line algorithms can be broken down into the
+following simple steps:
+
+1. Sort all events in the order they will be encountered by the sweep line.
+2. Loop over each event in order, update the state data structure and the solution
+   obtained so far to reflect the new situation.
+3. Return the final solution.
+
+In the Advent of Code problem, we can use a vertical sweep line that moves from
+top to bottom. Our events are the horizontal edges of the polygon. We sort them
+by y-coordinate, using the y-coordinate as a secondary ordering criterion if two
+horizontal edges have the same y-coordinate.
